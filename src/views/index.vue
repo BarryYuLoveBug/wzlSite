@@ -33,7 +33,7 @@
                 <picture>
                     <source srcset="/assets/images/wzl001.webp" type="image/webp">
                     <source srcset="/assets/images/wzl001.jpg" type="image/jpeg">
-                    <img src="/assets/images/biography/wzl001.jpg" class="img-fluid img-thumbnail">
+                    <img src="/assets/images/wzl001.jpg" class="img-fluid img-thumbnail">
                 </picture>
             </router-link>
         </div>
