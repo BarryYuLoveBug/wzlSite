@@ -57,7 +57,7 @@ module.exports = merge(webpackBaseConfig, {
         })
     ],
     externals: {
-        "babel-polyfill": 'window',
+        "@babel/polyfill": 'window',
         'bootstrap': 'window.bootstrap',
         'vue': 'window.Vue',
         'vuex': 'window.Vuex',
