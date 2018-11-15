@@ -22,7 +22,7 @@ module.exports = merge(webpackBaseConfig, {
     },
     plugins: [
         new ExtractTextPlugin({
-            filename: '[name].[hash].css',
+            filename: '[name].[contenthash].css',
             allChunks: true
         }),
         new OptimizeCSSPlugin({
