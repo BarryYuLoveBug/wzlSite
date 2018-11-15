@@ -4,4 +4,4 @@ import '@babel/polyfill'//IE10/11 不支持Promise，也不支持[if IE]判断�
 import 'vue'
 import 'vue-router'
 import 'axios'
-//import Vuex from 'vuex'
+import 'vuex'

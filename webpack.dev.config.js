@@ -1,16 +1,10 @@
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const merge = require('webpack-merge');
-const webpackBaseConfig = require('./webpack.base.config.js');
-/*
-const fs = require('fs');
+const path = require('path')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const merge = require('webpack-merge')
+const webpackBaseConfig = require('./webpack.base.config.js')
 
-fs.open('./src/config/env.js', 'w', function(err, fd) {
-    const buf = 'export default "development";';
-    fs.write(fd, buf, 0, buf.length, 0, function(err, written, buffer) {});
-});
-*/
 
 module.exports = merge(webpackBaseConfig, {
     devServer: {

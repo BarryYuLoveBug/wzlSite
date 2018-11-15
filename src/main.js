@@ -2,34 +2,18 @@
 import 'bootstrap'
 import Vue from 'vue'
 import router from './router'
-//import store from './store'
+import store from './store'
 import App from './app.vue'
+import { CHANGE_MMACTIVE } from './store/mutation-types'
 
-
-/*
-axios.interceptors.response.use(response => {
-    if (response.data.success === false) {
-        return Promise.reject({
-            reason: response.data.reason,
-            success: false
-        })
-    }
-    return response
-}, error => {
-    if (error.response && 401 === error.response.status) {
-        store.dispatch(LOGOUT_ACTION).then(() => {router.replace('/')})
-    }
-    return Promise.reject(error)
-})
-*/
 router.beforeEach(({name: toName, meta: {title: toTitle}}, from, next) => {
     window.document.title = toTitle ? toTitle + ' - WZL' : 'WZL'
     next()
 })
 
 router.afterEach(({name}) => {
-    if (app) {
-        app.eventHub.$emit('mmActive', name)
+    if (store) {
+        store.commit(CHANGE_MMACTIVE, name)
     }
     window.scrollTo(0, 0)
 })
@@ -37,7 +21,7 @@ router.afterEach(({name}) => {
 let app = new Vue({
     el: '#app',
     router,
-    //store,
+    store,
     data: {
         eventHub: new Vue()
     },
