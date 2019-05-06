@@ -22,7 +22,7 @@ module.exports = merge(webpackBaseConfig, {
     },
     plugins: [
         new ExtractTextPlugin({
-            filename: '[name].[hash].css',
+            filename: '[name].[contenthash].css',
             allChunks: true
         }),
         new OptimizeCSSPlugin({
@@ -57,7 +57,7 @@ module.exports = merge(webpackBaseConfig, {
         })
     ],
     externals: {
-        "babel-polyfill": 'window',
+        "@babel/polyfill": 'window',
         'bootstrap': 'window.bootstrap',
         'vue': 'window.Vue',
         'vuex': 'window.Vuex',

@@ -4,3 +4,5 @@ dist
 dist/*
 npm-debug.log
 index_prod.html
+.vs
+.vs/*

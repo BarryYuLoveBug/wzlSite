@@ -21,3 +21,5 @@ npm run build
 <img src="https://github.com/i627/wzlSite/blob/master/screenshots/001.jpg" />
 
 <img src="https://github.com/i627/wzlSite/blob/master/screenshots/002.jpg" />
+
+update 2018/10/03  好不容易看起来能支持ie了。

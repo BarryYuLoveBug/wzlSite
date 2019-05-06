@@ -37,12 +37,9 @@ export default {
 
 <style scoped>
 .layout {
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
+    flex: 1 0 auto;
     display: flex;
     flex-direction: column;
-    border: 1px solid #d7dde4;
     background: #f5f7f9;
 }
 .layout-header {
@@ -60,6 +57,7 @@ export default {
 }
 .layout-footer {
     flex: 0 0 auto;
+    bottom: 0;
     padding: 6px;
     color: #9e9e9e;
     background-color: #3e3e3e;
